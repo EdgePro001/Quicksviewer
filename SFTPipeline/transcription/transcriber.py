@@ -1,5 +1,5 @@
 """
-transfer_with_timestamp.py
+transcriber.py
 
 Use Whisper-large-v3 Model to transcribe videos under the BASIC_DATA_PATH, and save results as a .txt text file with timestamps and a JSON file.
 Consider each 20s-long segment of video as a basic unit of transcription.
