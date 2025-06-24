@@ -41,7 +41,7 @@ class QwenFilter:
         
         try:
             print("Downloading/Loading model from ModelScope...")
-            model_dir = snapshot_download('qwen/Qwen2.5-VL-72B-Instruct')
+            model_dir = snapshot_download('qwen/Qwen2.5-VL-7B-Instruct')
             print(f"Model available at: {model_dir}")
 
             model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
@@ -63,7 +63,7 @@ class QwenFilter:
             
             try:
                 # Fallback: try to load from HuggingFace directly (without flash_attention)
-                model_path = "Qwen/Qwen2.5-VL-72B-Instruct"
+                model_path = "Qwen/Qwen2.5-VL-7B-Instruct"
                 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
                     model_path, 
                     torch_dtype=torch.bfloat16, 
