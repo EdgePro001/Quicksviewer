@@ -185,8 +185,8 @@ def transcribe_segments_separately(model, segments: List[Tuple[str, float, float
     """transcribe 20s audio segments with progress tracking"""
     import warnings
     import os
-    
-    # 临时禁用所有警告和设置环境变量
+
+    #disable warnings
     warnings.filterwarnings("ignore")
     old_tqdm_disable = os.environ.get('TQDM_DISABLE', '')
     os.environ['TQDM_DISABLE'] = '1'
@@ -208,7 +208,7 @@ def transcribe_segments_separately(model, segments: List[Tuple[str, float, float
             log_prefix = f"[Segment: {start_time:.1f}s-{end_time:.1f}s]"
             
             try:
-                # 转录单个片段 - 禁用Whisper内部进度条
+                # disable tqdm from whisper
                 result = model.transcribe(
                     audio=segment_path,
                     language="en",
@@ -218,15 +218,13 @@ def transcribe_segments_separately(model, segments: List[Tuple[str, float, float
                     fp16=False
                 )
                 
-                # 处理转录结果
                 segment_text = result.get('text', '').strip()
-                
-                # 创建对齐的segment
+            
                 aligned_segment = {
                     'start': start_time,
                     'end': end_time,
                     'text': segment_text,
-                    'frame_index': int(start_time * TARGET_FPS),  # 对应的帧索引
+                    'frame_index': int(start_time * TARGET_FPS),  
                     'segment_duration': end_time - start_time
                 }
                 
@@ -236,7 +234,7 @@ def transcribe_segments_separately(model, segments: List[Tuple[str, float, float
                 error_message = f"{log_prefix} Transcription failed: {str(e)}"
                 if pbar_instance:
                     pbar_instance.write(error_message)
-                # 添加空的segment以保持时间对齐
+                # empty segments for aligning timestamp
                 all_segments.append({
                     'start': start_time,
                     'end': end_time,
@@ -245,13 +243,12 @@ def transcribe_segments_separately(model, segments: List[Tuple[str, float, float
                     'segment_duration': end_time - start_time
                 })
             
-            # 更新转录进度
+            
             if transcription_pbar:
                 transcription_pbar.update(1)
-                transcription_pbar.refresh()  # 强制刷新显示
+                transcription_pbar.refresh() 
     
     finally:
-        # 恢复环境变量和警告设置
         os.environ['TQDM_DISABLE'] = old_tqdm_disable
         warnings.resetwarnings()
         
@@ -264,23 +261,23 @@ def transcribe_segments_separately(model, segments: List[Tuple[str, float, float
 def process_video_with_20s_segments(video_path, intermediate_audio_path, frames_output_dir, model, pbar):
     """processing with progress tracking"""
     
-    # 1. 提取完整音频
+    # 1. extract audio
     audio_extracted, audio_msg = extract_audio_ffmpeg_sequential(video_path, intermediate_audio_path, pbar)
     if not audio_extracted:
         raise Exception(f"Audio extraction failed: {audio_msg}")
     
-    # 2. 提取1FPS帧
+    # 2. extract 1FPS frame
     frames_extracted, frames_msg, frame_count = extract_frames_at_1fps(video_path, frames_output_dir, pbar)
     if not frames_extracted:
         raise Exception(f"Frame extraction failed: {frames_msg}")
     
-    # 3. 将音频分割成20秒片段
+    # 3. split audio into 20s-long segments
     audio_segments = split_audio_into_segments(intermediate_audio_path, SEGMENT_DURATION)
     
     if not audio_segments:
         raise Exception("Failed to create audio segments")
     
-    # 4. 提取每个音频片段 - 静默处理
+    # 4. extract audio
     successful_extractions = 0
     for segment_path, start_time, end_time in audio_segments:
         success, msg = extract_audio_segment_ffmpeg(intermediate_audio_path, segment_path, start_time, end_time, pbar)
@@ -292,10 +289,10 @@ def process_video_with_20s_segments(video_path, intermediate_audio_path, frames_
         if pbar:
             pbar.write(error_message)
     
-    # 5. 分别转录每个片段 - 带进度显示
+    # 5. transcribe each segment
     aligned_segments = transcribe_segments_separately(model, audio_segments, pbar, video_pbar=pbar)
     
-    # 6. 清理临时分段文件
+    # 6. remove useless files
     for segment_path, _, _ in audio_segments:
         try:
             if os.path.exists(segment_path):
@@ -357,7 +354,6 @@ def main_sequential():
     import warnings
     import os
     
-    # 在程序开始时设置环境变量，禁用额外的进度条
     os.environ['TOKENIZERS_PARALLELISM'] = 'false'
     warnings.filterwarnings("ignore", category=FutureWarning)
     
@@ -460,7 +456,6 @@ def main_sequential():
         "error_transcription": 0, "error_saving": 0, "error_general": 0
     }
 
-    # 主进度条：总体处理进度
     with tqdm(total=len(files_to_process), desc="Processing Videos", unit="video", position=0, ncols=120, leave=True) as main_pbar:
         for video_path in files_to_process:
             video_name = os.path.basename(video_path)
