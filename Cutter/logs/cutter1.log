@@ -1,0 +1,337 @@
+nohup: ignoring input
+2025-07-03 11:52:13,554 - INFO - Found 16 JSON files
+2025-07-03 11:52:13,554 - INFO - 
+Progress: 1/16
+2025-07-03 11:52:13,554 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_d8dPGb8SkjQ.json
+2025-07-03 11:52:13,554 - INFO - Searching for video: d8dPGb8SkjQ.mp4
+2025-07-03 11:52:13,571 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241022/00/d8dPGb8SkjQ.mp4
+2025-07-03 11:52:13,573 - INFO - Cutting video: d8dPGb8SkjQ.mp4 [332.9s - 364.5s]
+2025-07-03 11:52:14,200 - INFO - Successfully processed segment 1/4
+2025-07-03 11:52:14,201 - INFO - Cutting video: d8dPGb8SkjQ.mp4 [386.5s - 428.7s]
+2025-07-03 11:52:14,948 - INFO - Successfully processed segment 2/4
+2025-07-03 11:52:14,948 - INFO - Cutting video: d8dPGb8SkjQ.mp4 [666.1s - 701.0s]
+2025-07-03 11:52:16,111 - INFO - Successfully processed segment 3/4
+2025-07-03 11:52:16,111 - INFO - Cutting video: d8dPGb8SkjQ.mp4 [888.1s - 923.4s]
+2025-07-03 11:52:17,526 - INFO - Successfully processed segment 4/4
+2025-07-03 11:52:17,526 - INFO - 
+Progress: 2/16
+2025-07-03 11:52:17,526 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_fyx1jrUCgxY.json
+2025-07-03 11:52:17,526 - INFO - Searching for video: fyx1jrUCgxY.mp4
+2025-07-03 11:52:17,635 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241105/07/fyx1jrUCgxY.mp4
+2025-07-03 11:52:17,636 - INFO - Cutting video: fyx1jrUCgxY.mp4 [345.9s - 374.0s]
+2025-07-03 11:52:18,288 - INFO - Successfully processed segment 1/5
+2025-07-03 11:52:18,288 - INFO - Cutting video: fyx1jrUCgxY.mp4 [459.8s - 489.8s]
+2025-07-03 11:52:19,075 - INFO - Successfully processed segment 2/5
+2025-07-03 11:52:19,075 - INFO - Cutting video: fyx1jrUCgxY.mp4 [637.5s - 668.2s]
+2025-07-03 11:52:20,153 - INFO - Successfully processed segment 3/5
+2025-07-03 11:52:20,153 - INFO - Cutting video: fyx1jrUCgxY.mp4 [961.5s - 1003.3s]
+2025-07-03 11:52:21,693 - INFO - Successfully processed segment 4/5
+2025-07-03 11:52:21,693 - INFO - Cutting video: fyx1jrUCgxY.mp4 [1334.1s - 1361.0s]
+2025-07-03 11:52:23,856 - INFO - Successfully processed segment 5/5
+2025-07-03 11:52:23,856 - INFO - 
+Progress: 3/16
+2025-07-03 11:52:23,856 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_FWhfTvXkQE8.json
+2025-07-03 11:52:23,856 - INFO - Searching for video: FWhfTvXkQE8.mp4
+2025-07-03 11:52:23,949 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241112/05/FWhfTvXkQE8.mp4
+2025-07-03 11:52:23,949 - INFO - Cutting video: FWhfTvXkQE8.mp4 [87.5s - 113.7s]
+2025-07-03 11:52:24,203 - INFO - Successfully processed segment 1/73
+2025-07-03 11:52:24,203 - INFO - Cutting video: FWhfTvXkQE8.mp4 [148.5s - 181.6s]
+2025-07-03 11:52:24,563 - INFO - Successfully processed segment 2/73
+2025-07-03 11:52:24,563 - INFO - Cutting video: FWhfTvXkQE8.mp4 [104.5s - 124.6s]
+2025-07-03 11:52:24,820 - INFO - Successfully processed segment 3/73
+2025-07-03 11:52:24,820 - INFO - Cutting video: FWhfTvXkQE8.mp4 [15.0s - 42.2s]
+2025-07-03 11:52:24,983 - INFO - Successfully processed segment 4/73
+2025-07-03 11:52:24,983 - INFO - Cutting video: FWhfTvXkQE8.mp4 [115.0s - 158.5s]
+2025-07-03 11:52:25,318 - INFO - Successfully processed segment 5/73
+2025-07-03 11:52:25,318 - INFO - Cutting video: FWhfTvXkQE8.mp4 [231.9s - 266.3s]
+2025-07-03 11:52:25,794 - INFO - Successfully processed segment 6/73
+2025-07-03 11:52:25,794 - INFO - Cutting video: FWhfTvXkQE8.mp4 [32.2s - 62.7s]
+2025-07-03 11:52:25,975 - INFO - Successfully processed segment 7/73
+2025-07-03 11:52:25,975 - INFO - Cutting video: FWhfTvXkQE8.mp4 [318.5s - 359.1s]
+2025-07-03 11:52:26,570 - INFO - Successfully processed segment 8/73
+2025-07-03 11:52:26,570 - INFO - Cutting video: FWhfTvXkQE8.mp4 [300.0s - 326.1s]
+2025-07-03 11:52:27,135 - INFO - Successfully processed segment 9/73
+2025-07-03 11:52:27,136 - INFO - Cutting video: FWhfTvXkQE8.mp4 [435.0s - 468.2s]
+2025-07-03 11:52:27,947 - INFO - Successfully processed segment 10/73
+2025-07-03 11:52:27,949 - INFO - Cutting video: FWhfTvXkQE8.mp4 [460.8s - 503.0s]
+2025-07-03 11:52:28,779 - INFO - Successfully processed segment 11/73
+2025-07-03 11:52:28,779 - INFO - Cutting video: FWhfTvXkQE8.mp4 [265.1s - 307.4s]
+2025-07-03 11:52:29,316 - INFO - Successfully processed segment 12/73
+2025-07-03 11:52:29,316 - INFO - Cutting video: FWhfTvXkQE8.mp4 [547.3s - 574.5s]
+2025-07-03 11:52:30,237 - INFO - Successfully processed segment 13/73
+2025-07-03 11:52:30,238 - INFO - Cutting video: FWhfTvXkQE8.mp4 [564.5s - 581.9s]
+2025-07-03 11:52:31,188 - INFO - Successfully processed segment 14/73
+2025-07-03 11:52:31,188 - INFO - Cutting video: FWhfTvXkQE8.mp4 [493.0s - 535.4s]
+2025-07-03 11:52:32,058 - INFO - Successfully processed segment 15/73
+2025-07-03 11:52:32,058 - INFO - Cutting video: FWhfTvXkQE8.mp4 [575.0s - 617.4s]
+2025-07-03 11:52:33,104 - INFO - Successfully processed segment 16/73
+2025-07-03 11:52:33,104 - INFO - Cutting video: FWhfTvXkQE8.mp4 [722.5s - 748.9s]
+2025-07-03 11:52:34,225 - INFO - Successfully processed segment 17/73
+2025-07-03 11:52:34,225 - INFO - Cutting video: FWhfTvXkQE8.mp4 [642.9s - 671.4s]
+2025-07-03 11:52:35,107 - INFO - Successfully processed segment 18/73
+2025-07-03 11:52:35,107 - INFO - Cutting video: FWhfTvXkQE8.mp4 [861.5s - 890.0s]
+2025-07-03 11:52:36,493 - INFO - Successfully processed segment 19/73
+2025-07-03 11:52:36,493 - INFO - Cutting video: FWhfTvXkQE8.mp4 [925.9s - 955.0s]
+2025-07-03 11:52:38,007 - INFO - Successfully processed segment 20/73
+2025-07-03 11:52:38,007 - INFO - Cutting video: FWhfTvXkQE8.mp4 [810.3s - 840.4s]
+2025-07-03 11:52:39,326 - INFO - Successfully processed segment 21/73
+2025-07-03 11:52:39,326 - INFO - Cutting video: FWhfTvXkQE8.mp4 [835.0s - 868.0s]
+2025-07-03 11:52:40,661 - INFO - Successfully processed segment 22/73
+2025-07-03 11:52:40,661 - INFO - Cutting video: FWhfTvXkQE8.mp4 [900.6s - 934.6s]
+2025-07-03 11:52:42,063 - INFO - Successfully processed segment 23/73
+2025-07-03 11:52:42,063 - INFO - Cutting video: FWhfTvXkQE8.mp4 [882.5s - 908.8s]
+2025-07-03 11:52:43,388 - INFO - Successfully processed segment 24/73
+2025-07-03 11:52:43,388 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1046.2s - 1090.1s]
+2025-07-03 11:52:45,099 - INFO - Successfully processed segment 25/73
+2025-07-03 11:52:45,099 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1080.1s - 1114.7s]
+2025-07-03 11:52:46,752 - INFO - Successfully processed segment 26/73
+2025-07-03 11:52:46,753 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1121.0s - 1152.9s]
+2025-07-03 11:52:48,498 - INFO - Successfully processed segment 27/73
+2025-07-03 11:52:48,498 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1143.2s - 1168.2s]
+2025-07-03 11:52:50,282 - INFO - Successfully processed segment 28/73
+2025-07-03 11:52:50,282 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1015.0s - 1056.2s]
+2025-07-03 11:52:51,877 - INFO - Successfully processed segment 29/73
+2025-07-03 11:52:51,877 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1159.5s - 1178.2s]
+2025-07-03 11:52:53,810 - INFO - Successfully processed segment 30/73
+2025-07-03 11:52:53,811 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1345.2s - 1378.0s]
+2025-07-03 11:52:56,020 - INFO - Successfully processed segment 31/73
+2025-07-03 11:52:56,020 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1275.0s - 1301.8s]
+2025-07-03 11:52:58,072 - INFO - Successfully processed segment 32/73
+2025-07-03 11:52:58,072 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1252.6s - 1284.0s]
+2025-07-03 11:53:00,124 - INFO - Successfully processed segment 33/73
+2025-07-03 11:53:00,125 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1295.0s - 1320.5s]
+2025-07-03 11:53:01,643 - INFO - Successfully processed segment 34/73
+2025-07-03 11:53:01,643 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1195.0s - 1234.8s]
+2025-07-03 11:53:03,555 - INFO - Successfully processed segment 35/73
+2025-07-03 11:53:03,556 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1415.0s - 1441.6s]
+2025-07-03 11:53:05,768 - INFO - Successfully processed segment 36/73
+2025-07-03 11:53:05,768 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1455.0s - 1490.4s]
+2025-07-03 11:53:08,092 - INFO - Successfully processed segment 37/73
+2025-07-03 11:53:08,092 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1481.5s - 1520.6s]
+2025-07-03 11:53:09,863 - INFO - Successfully processed segment 38/73
+2025-07-03 11:53:09,864 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1372.4s - 1400.5s]
+2025-07-03 11:53:12,145 - INFO - Successfully processed segment 39/73
+2025-07-03 11:53:12,145 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1390.5s - 1424.0s]
+2025-07-03 11:53:14,226 - INFO - Successfully processed segment 40/73
+2025-07-03 11:53:14,226 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1699.9s - 1729.6s]
+2025-07-03 11:53:16,954 - INFO - Successfully processed segment 41/73
+2025-07-03 11:53:16,954 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1582.5s - 1610.1s]
+2025-07-03 11:53:19,382 - INFO - Successfully processed segment 42/73
+2025-07-03 11:53:19,382 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1635.0s - 1679.2s]
+2025-07-03 11:53:21,993 - INFO - Successfully processed segment 43/73
+2025-07-03 11:53:21,993 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1512.5s - 1543.9s]
+2025-07-03 11:53:24,419 - INFO - Successfully processed segment 44/73
+2025-07-03 11:53:24,420 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1535.0s - 1571.2s]
+2025-07-03 11:53:26,772 - INFO - Successfully processed segment 45/73
+2025-07-03 11:53:26,773 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1563.5s - 1590.1s]
+2025-07-03 11:53:29,200 - INFO - Successfully processed segment 46/73
+2025-07-03 11:53:29,200 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1669.2s - 1709.9s]
+2025-07-03 11:53:31,827 - INFO - Successfully processed segment 47/73
+2025-07-03 11:53:31,827 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1725.5s - 1763.9s]
+2025-07-03 11:53:34,624 - INFO - Successfully processed segment 48/73
+2025-07-03 11:53:34,624 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1807.5s - 1847.3s]
+2025-07-03 11:53:37,537 - INFO - Successfully processed segment 49/73
+2025-07-03 11:53:37,538 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1755.0s - 1781.5s]
+2025-07-03 11:53:40,270 - INFO - Successfully processed segment 50/73
+2025-07-03 11:53:40,270 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1772.1s - 1812.6s]
+2025-07-03 11:53:43,013 - INFO - Successfully processed segment 51/73
+2025-07-03 11:53:43,013 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1994.8s - 2023.5s]
+2025-07-03 11:53:46,127 - INFO - Successfully processed segment 52/73
+2025-07-03 11:53:46,127 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1939.0s - 1971.5s]
+2025-07-03 11:53:49,153 - INFO - Successfully processed segment 53/73
+2025-07-03 11:53:49,153 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1879.5s - 1910.1s]
+2025-07-03 11:53:52,035 - INFO - Successfully processed segment 54/73
+2025-07-03 11:53:52,036 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2049.1s - 2067.6s]
+2025-07-03 11:53:55,247 - INFO - Successfully processed segment 55/73
+2025-07-03 11:53:55,247 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2155.0s - 2195.5s]
+2025-07-03 11:53:58,624 - INFO - Successfully processed segment 56/73
+2025-07-03 11:53:58,625 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2130.5s - 2164.1s]
+2025-07-03 11:54:01,924 - INFO - Successfully processed segment 57/73
+2025-07-03 11:54:01,924 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2203.5s - 2244.6s]
+2025-07-03 11:54:05,074 - INFO - Successfully processed segment 58/73
+2025-07-03 11:54:05,074 - INFO - Cutting video: FWhfTvXkQE8.mp4 [1901.5s - 1943.8s]
+2025-07-03 11:54:07,974 - INFO - Successfully processed segment 59/73
+2025-07-03 11:54:07,975 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2235.0s - 2272.8s]
+2025-07-03 11:54:11,174 - INFO - Successfully processed segment 60/73
+2025-07-03 11:54:11,174 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2111.4s - 2136.6s]
+2025-07-03 11:54:14,371 - INFO - Successfully processed segment 61/73
+2025-07-03 11:54:14,371 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2283.4s - 2314.9s]
+2025-07-03 11:54:16,960 - INFO - Successfully processed segment 62/73
+2025-07-03 11:54:16,960 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2015.0s - 2059.1s]
+2025-07-03 11:54:20,078 - INFO - Successfully processed segment 63/73
+2025-07-03 11:54:20,078 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2415.0s - 2447.7s]
+2025-07-03 11:54:22,527 - INFO - Successfully processed segment 64/73
+2025-07-03 11:54:22,527 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2375.0s - 2413.2s]
+2025-07-03 11:54:26,234 - INFO - Successfully processed segment 65/73
+2025-07-03 11:54:26,234 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2440.2s - 2462.3s]
+2025-07-03 11:54:30,120 - INFO - Successfully processed segment 66/73
+2025-07-03 11:54:30,120 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2335.0s - 2364.4s]
+2025-07-03 11:54:33,720 - INFO - Successfully processed segment 67/73
+2025-07-03 11:54:33,720 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2580.1s - 2624.5s]
+2025-07-03 11:54:36,565 - INFO - Successfully processed segment 68/73
+2025-07-03 11:54:36,565 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2546.5s - 2590.1s]
+2025-07-03 11:54:40,534 - INFO - Successfully processed segment 69/73
+2025-07-03 11:54:40,534 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2615.0s - 2654.4s]
+2025-07-03 11:54:44,405 - INFO - Successfully processed segment 70/73
+2025-07-03 11:54:44,405 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2695.0s - 2725.4s]
+2025-07-03 11:54:48,625 - INFO - Successfully processed segment 71/73
+2025-07-03 11:54:48,625 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2826.4s - 2870.4s]
+2025-07-03 11:54:52,982 - INFO - Successfully processed segment 72/73
+2025-07-03 11:54:52,982 - INFO - Cutting video: FWhfTvXkQE8.mp4 [2775.0s - 2818.8s]
+2025-07-03 11:54:57,232 - INFO - Successfully processed segment 73/73
+2025-07-03 11:54:57,232 - INFO - 
+Progress: 4/16
+2025-07-03 11:54:57,232 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_MngCvPNj5qU.json
+2025-07-03 11:54:57,232 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_MngCvPNj5qU.json, skipping
+2025-07-03 11:54:57,232 - INFO - 
+Progress: 5/16
+2025-07-03 11:54:57,232 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_mACkkkbnpoE.json
+2025-07-03 11:54:57,233 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_mACkkkbnpoE.json, skipping
+2025-07-03 11:54:57,233 - INFO - 
+Progress: 6/16
+2025-07-03 11:54:57,233 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_DTEWLRVcC1A.json
+2025-07-03 11:54:57,233 - INFO - Searching for video: DTEWLRVcC1A.mp4
+2025-07-03 11:54:57,298 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241116/07/DTEWLRVcC1A.mp4
+2025-07-03 11:54:57,302 - INFO - Cutting video: DTEWLRVcC1A.mp4 [101.5s - 138.6s]
+2025-07-03 11:54:57,634 - INFO - Successfully processed segment 1/8
+2025-07-03 11:54:57,634 - INFO - Cutting video: DTEWLRVcC1A.mp4 [12.9s - 39.2s]
+2025-07-03 11:54:57,790 - INFO - Successfully processed segment 2/8
+2025-07-03 11:54:57,791 - INFO - Cutting video: DTEWLRVcC1A.mp4 [128.6s - 154.3s]
+2025-07-03 11:54:58,110 - INFO - Successfully processed segment 3/8
+2025-07-03 11:54:58,110 - INFO - Cutting video: DTEWLRVcC1A.mp4 [395.0s - 421.0s]
+2025-07-03 11:54:58,837 - INFO - Successfully processed segment 4/8
+2025-07-03 11:54:58,837 - INFO - Cutting video: DTEWLRVcC1A.mp4 [610.3s - 636.5s]
+2025-07-03 11:54:59,899 - INFO - Successfully processed segment 5/8
+2025-07-03 11:54:59,899 - INFO - Cutting video: DTEWLRVcC1A.mp4 [1012.4s - 1041.7s]
+2025-07-03 11:55:01,552 - INFO - Successfully processed segment 6/8
+2025-07-03 11:55:01,552 - INFO - Cutting video: DTEWLRVcC1A.mp4 [991.5s - 1022.4s]
+2025-07-03 11:55:03,161 - INFO - Successfully processed segment 7/8
+2025-07-03 11:55:03,162 - INFO - Cutting video: DTEWLRVcC1A.mp4 [1078.2s - 1104.5s]
+2025-07-03 11:55:04,914 - INFO - Successfully processed segment 8/8
+2025-07-03 11:55:04,914 - INFO - 
+Progress: 7/16
+2025-07-03 11:55:04,914 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_IeEMaFA28VA.json
+2025-07-03 11:55:04,914 - INFO - Searching for video: IeEMaFA28VA.mp4
+2025-07-03 11:55:04,921 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20240921/12/IeEMaFA28VA.mp4
+2025-07-03 11:55:04,921 - INFO - Cutting video: IeEMaFA28VA.mp4 [29.8s - 73.4s]
+2025-07-03 11:55:05,121 - INFO - Successfully processed segment 1/2
+2025-07-03 11:55:05,121 - INFO - Cutting video: IeEMaFA28VA.mp4 [797.5s - 840.3s]
+2025-07-03 11:55:06,255 - INFO - Successfully processed segment 2/2
+2025-07-03 11:55:06,255 - INFO - 
+Progress: 8/16
+2025-07-03 11:55:06,255 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_qHZagvfQC4A.json
+2025-07-03 11:55:06,255 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_qHZagvfQC4A.json, skipping
+2025-07-03 11:55:06,255 - INFO - 
+Progress: 9/16
+2025-07-03 11:55:06,255 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_znbEHCC-Ts8.json
+2025-07-03 11:55:06,256 - INFO - Searching for video: znbEHCC-Ts8.mp4
+2025-07-03 11:55:06,596 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241101/15/znbEHCC-Ts8.mp4
+2025-07-03 11:55:06,596 - INFO - Cutting video: znbEHCC-Ts8.mp4 [0.0s - 28.6s]
+2025-07-03 11:55:06,752 - INFO - Successfully processed segment 1/12
+2025-07-03 11:55:06,752 - INFO - Cutting video: znbEHCC-Ts8.mp4 [915.0s - 956.8s]
+2025-07-03 11:55:08,196 - INFO - Successfully processed segment 2/12
+2025-07-03 11:55:08,196 - INFO - Cutting video: znbEHCC-Ts8.mp4 [833.3s - 876.7s]
+2025-07-03 11:55:09,561 - INFO - Successfully processed segment 3/12
+2025-07-03 11:55:09,561 - INFO - Cutting video: znbEHCC-Ts8.mp4 [884.1s - 920.4s]
+2025-07-03 11:55:10,863 - INFO - Successfully processed segment 4/12
+2025-07-03 11:55:10,864 - INFO - Cutting video: znbEHCC-Ts8.mp4 [946.8s - 976.3s]
+2025-07-03 11:55:12,330 - INFO - Successfully processed segment 5/12
+2025-07-03 11:55:12,331 - INFO - Cutting video: znbEHCC-Ts8.mp4 [1009.1s - 1042.4s]
+2025-07-03 11:55:13,967 - INFO - Successfully processed segment 6/12
+2025-07-03 11:55:13,967 - INFO - Cutting video: znbEHCC-Ts8.mp4 [1035.0s - 1078.5s]
+2025-07-03 11:55:15,504 - INFO - Successfully processed segment 7/12
+2025-07-03 11:55:15,504 - INFO - Cutting video: znbEHCC-Ts8.mp4 [1068.5s - 1111.0s]
+2025-07-03 11:55:17,125 - INFO - Successfully processed segment 8/12
+2025-07-03 11:55:17,125 - INFO - Cutting video: znbEHCC-Ts8.mp4 [1101.4s - 1140.7s]
+2025-07-03 11:55:18,724 - INFO - Successfully processed segment 9/12
+2025-07-03 11:55:18,724 - INFO - Cutting video: znbEHCC-Ts8.mp4 [967.0s - 1000.4s]
+2025-07-03 11:55:20,122 - INFO - Successfully processed segment 10/12
+2025-07-03 11:55:20,122 - INFO - Cutting video: znbEHCC-Ts8.mp4 [1148.3s - 1189.8s]
+2025-07-03 11:55:21,922 - INFO - Successfully processed segment 11/12
+2025-07-03 11:55:21,923 - INFO - Cutting video: znbEHCC-Ts8.mp4 [1340.1s - 1384.2s]
+2025-07-03 11:55:23,863 - INFO - Successfully processed segment 12/12
+2025-07-03 11:55:23,863 - INFO - 
+Progress: 10/16
+2025-07-03 11:55:23,863 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_1sw2lctH2vQ.json
+2025-07-03 11:55:23,863 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_1sw2lctH2vQ.json, skipping
+2025-07-03 11:55:23,863 - INFO - 
+Progress: 11/16
+2025-07-03 11:55:23,863 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_4ux0tiWwUKc.json
+2025-07-03 11:55:23,863 - INFO - Searching for video: 4ux0tiWwUKc.mp4
+2025-07-03 11:55:23,910 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241005/19/4ux0tiWwUKc.mp4
+2025-07-03 11:55:23,910 - INFO - Cutting video: 4ux0tiWwUKc.mp4 [86.8s - 102.0s]
+2025-07-03 11:55:24,184 - INFO - Successfully processed segment 1/3
+2025-07-03 11:55:24,184 - INFO - Cutting video: 4ux0tiWwUKc.mp4 [288.2s - 330.3s]
+2025-07-03 11:55:24,746 - INFO - Successfully processed segment 2/3
+2025-07-03 11:55:24,746 - INFO - Cutting video: 4ux0tiWwUKc.mp4 [186.5s - 213.3s]
+2025-07-03 11:55:25,101 - INFO - Successfully processed segment 3/3
+2025-07-03 11:55:25,101 - INFO - 
+Progress: 12/16
+2025-07-03 11:55:25,101 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_b9Qc0B4XuGw.json
+2025-07-03 11:55:25,101 - INFO - Searching for video: b9Qc0B4XuGw.mp4
+2025-07-03 11:55:25,198 - INFO - Found video at: /thunlp_train/datasets/external-data-youtube/video/20241006/11/b9Qc0B4XuGw.mp4
+2025-07-03 11:55:25,198 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [384.9s - 423.5s]
+2025-07-03 11:55:25,928 - INFO - Successfully processed segment 1/22
+2025-07-03 11:55:25,929 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [213.1s - 257.4s]
+2025-07-03 11:55:26,387 - INFO - Successfully processed segment 2/22
+2025-07-03 11:55:26,387 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [328.6s - 371.8s]
+2025-07-03 11:55:26,968 - INFO - Successfully processed segment 3/22
+2025-07-03 11:55:26,968 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [289.1s - 320.2s]
+2025-07-03 11:55:27,524 - INFO - Successfully processed segment 4/22
+2025-07-03 11:55:27,524 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [415.0s - 453.6s]
+2025-07-03 11:55:28,267 - INFO - Successfully processed segment 5/22
+2025-07-03 11:55:28,267 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [615.0s - 638.6s]
+2025-07-03 11:55:29,332 - INFO - Successfully processed segment 6/22
+2025-07-03 11:55:29,332 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [495.0s - 522.9s]
+2025-07-03 11:55:30,138 - INFO - Successfully processed segment 7/22
+2025-07-03 11:55:30,138 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [554.7s - 586.4s]
+2025-07-03 11:55:31,088 - INFO - Successfully processed segment 8/22
+2025-07-03 11:55:31,088 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [844.5s - 882.1s]
+2025-07-03 11:55:32,577 - INFO - Successfully processed segment 9/22
+2025-07-03 11:55:32,578 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [724.5s - 764.9s]
+2025-07-03 11:55:33,849 - INFO - Successfully processed segment 10/22
+2025-07-03 11:55:33,849 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1053.9s - 1083.9s]
+2025-07-03 11:55:35,465 - INFO - Successfully processed segment 11/22
+2025-07-03 11:55:35,465 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1175.0s - 1219.8s]
+2025-07-03 11:55:37,281 - INFO - Successfully processed segment 12/22
+2025-07-03 11:55:37,282 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1095.0s - 1124.3s]
+2025-07-03 11:55:38,949 - INFO - Successfully processed segment 13/22
+2025-07-03 11:55:38,949 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1075.0s - 1097.6s]
+2025-07-03 11:55:40,697 - INFO - Successfully processed segment 14/22
+2025-07-03 11:55:40,697 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1147.5s - 1181.7s]
+2025-07-03 11:55:42,535 - INFO - Successfully processed segment 15/22
+2025-07-03 11:55:42,535 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1471.9s - 1514.3s]
+2025-07-03 11:55:44,873 - INFO - Successfully processed segment 16/22
+2025-07-03 11:55:44,873 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1507.6s - 1542.1s]
+2025-07-03 11:55:47,073 - INFO - Successfully processed segment 17/22
+2025-07-03 11:55:47,073 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1571.8s - 1599.2s]
+2025-07-03 11:55:49,496 - INFO - Successfully processed segment 18/22
+2025-07-03 11:55:49,496 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1435.0s - 1455.6s]
+2025-07-03 11:55:51,664 - INFO - Successfully processed segment 19/22
+2025-07-03 11:55:51,664 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1535.0s - 1578.6s]
+2025-07-03 11:55:54,143 - INFO - Successfully processed segment 20/22
+2025-07-03 11:55:54,143 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1629.7s - 1661.4s]
+2025-07-03 11:55:56,668 - INFO - Successfully processed segment 21/22
+2025-07-03 11:55:56,669 - INFO - Cutting video: b9Qc0B4XuGw.mp4 [1652.4s - 1693.9s]
+2025-07-03 11:55:59,141 - INFO - Successfully processed segment 22/22
+2025-07-03 11:55:59,141 - INFO - 
+Progress: 13/16
+2025-07-03 11:55:59,141 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_ByDntUAaAOc.json
+2025-07-03 11:55:59,141 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_ByDntUAaAOc.json, skipping
+2025-07-03 11:55:59,141 - INFO - 
+Progress: 14/16
+2025-07-03 11:55:59,141 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_WBQLrDKEVgM.json
+2025-07-03 11:55:59,141 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_WBQLrDKEVgM.json, skipping
+2025-07-03 11:55:59,141 - INFO - 
+Progress: 15/16
+2025-07-03 11:55:59,141 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_Kunl6eQXrkQ.json
+2025-07-03 11:55:59,141 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_Kunl6eQXrkQ.json, skipping
+2025-07-03 11:55:59,141 - INFO - 
+Progress: 16/16
+2025-07-03 11:55:59,141 - INFO - Processing file: /user/majunxian/SFTPipeline/FiltedOutput/filtered_64lOp1pBVPo.json
+2025-07-03 11:55:59,141 - INFO - No segments in file /user/majunxian/SFTPipeline/FiltedOutput/filtered_64lOp1pBVPo.json, skipping
+2025-07-03 11:55:59,141 - INFO - 
+Processing complete!
+2025-07-03 11:55:59,141 - INFO - Total JSON files found: 16
+2025-07-03 11:55:59,141 - INFO - Successfully processed: 8
+2025-07-03 11:55:59,141 - INFO - Skipped (no segments or video not found): 8

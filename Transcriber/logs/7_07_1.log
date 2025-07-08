@@ -1,0 +1,615 @@
+nohup: ignoring input
+[0;35m
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    Enhanced Whisper Processing System                       ║
+║                     A100-Optimized Video Transcription                      ║
+║                   GPU 0-3 Configuration (4 GPUs × 6 Models)                ║
+║                              Version 2.0                                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+[0m
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Starting Enhanced Whisper Processing System v2.0
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Script directory: /user/majunxian/SFTPipeline/Transcriber
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Log file: /user/majunxian/SFTPipeline/Pool/logs/whisper_processing_20250707_163358.log
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Error log: /user/majunxian/SFTPipeline/Pool/logs/errors_20250707_163358.log
+[0;34m================================================================================[0m
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Checking system requirements...
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Available system memory: 1596.0GB
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Available disk space: 62591.3GB
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Checking CUDA environment for GPU 0-3...
+[0;32m[INFO][0m 2025-07-07 16:33:58 - Requested GPUs: 0 1 2 3
+[0;32m[INFO][0m 2025-07-07 16:33:59 - GPU 0: NVIDIA A100-SXM4-80GB - Total Memory: 81920 MiB
+[0;32m[SUCCESS][0m 2025-07-07 16:33:59 - GPU 0: A100 detected - optimal for Whisper processing
+[0;32m[INFO][0m 2025-07-07 16:34:00 - GPU 1: NVIDIA A100-SXM4-80GB - Total Memory: 81920 MiB
+[0;32m[SUCCESS][0m 2025-07-07 16:34:00 - GPU 1: A100 detected - optimal for Whisper processing
+[0;32m[INFO][0m 2025-07-07 16:34:00 - GPU 2: NVIDIA A100-SXM4-80GB - Total Memory: 81920 MiB
+[0;32m[SUCCESS][0m 2025-07-07 16:34:00 - GPU 2: A100 detected - optimal for Whisper processing
+[0;32m[INFO][0m 2025-07-07 16:34:01 - GPU 3: NVIDIA A100-SXM4-80GB - Total Memory: 81920 MiB
+[0;32m[SUCCESS][0m 2025-07-07 16:34:01 - GPU 3: A100 detected - optimal for Whisper processing
+[0;32m[SUCCESS][0m 2025-07-07 16:34:01 - All requested GPUs (0 1 2 3) are available and ready
+[0;32m[INFO][0m 2025-07-07 16:34:01 - Checking Python environment...
+[0;32m[INFO][0m 2025-07-07 16:34:01 - Python version: 3.11.7
+[0;32m[INFO][0m 2025-07-07 16:34:01 - Virtual environment: /user/majunxian/venv
+[0;32m[SUCCESS][0m 2025-07-07 16:34:07 - All required Python packages are available
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Checking system dependencies...
+[0;32m[INFO][0m 2025-07-07 16:34:07 - FFmpeg version: 6.1.1-3ubuntu5
+[1;33m[WARN][0m 2025-07-07 16:34:07 - jq not found. Some features may not work properly.
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Validating paths and files...
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Videos to process: 10324
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Output directory: /user/majunxian/SFTPipeline/Pool
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Log directory: /user/majunxian/SFTPipeline/Pool/logs
+[0;34m================================================================================[0m
+[0;32m[INFO][0m 2025-07-07 16:34:07 - GPU Configuration Summary:
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Target GPUs: 0,1,2,3
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Number of GPUs: 4
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Models per GPU: 6
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Total Models: 24
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Batch Size: 32
+[0;32m[INFO][0m 2025-07-07 16:34:07 - 
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Path Configuration:
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Model Path: /user/zhangyizhe/whisper-large-v3/my_whisper_model
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Data Path: /thunlp_train/datasets/external-data-youtube/video/20241103/
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Output Directory: /user/majunxian/SFTPipeline/Pool
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Target File: /user/zhangyizhe/whisper_module/target.txt
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Virtual Environment: /user/zhangyizhe/venv_whisper
+[0;32m[INFO][0m 2025-07-07 16:34:07 - 
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Processing Options:
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Monitoring: true
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Cleanup: true
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Summary: true
+[0;32m[INFO][0m 2025-07-07 16:34:07 -   Auto-install Dependencies: false
+[0;34m================================================================================[0m
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Preparing processing environment for GPU 0,1,2,3...
+[0;32m[SUCCESS][0m 2025-07-07 16:34:07 - Environment prepared for 24 Whisper models across 4 GPUs
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Starting Whisper processing with 24 models on GPU 0,1,2,3...
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Starting system monitoring for GPU 0,1,2,3...
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Executing: python3 /user/majunxian/SFTPipeline/Transcriber/TranscriberOpt.py
+[0;32m[INFO][0m 2025-07-07 16:34:07 - Configuration: 4 GPUs × 6 models = 24 total models
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+ENHANCED WHISPER PROCESSING SYSTEM:
+============================================================
+System:
+  - CPU cores: 112
+  - Available memory: 1595.7GB
+CUDA Configuration (A100-Optimized):
+  - CUDA version: 12.6
+  - Available GPUs: 4
+  - GPU 0: NVIDIA A100-SXM4-80GB
+    * Memory: 79.2GB
+    * Compute capability: 8.0
+    * Multiprocessors: 108
+    * A100-specific: TF32 enabled, optimized batch sizes
+  - GPU 1: NVIDIA A100-SXM4-80GB
+    * Memory: 79.2GB
+    * Compute capability: 8.0
+    * Multiprocessors: 108
+    * A100-specific: TF32 enabled, optimized batch sizes
+  - GPU 2: NVIDIA A100-SXM4-80GB
+    * Memory: 79.2GB
+    * Compute capability: 8.0
+    * Multiprocessors: 108
+    * A100-specific: TF32 enabled, optimized batch sizes
+  - GPU 3: NVIDIA A100-SXM4-80GB
+    * Memory: 79.2GB
+    * Compute capability: 8.0
+    * Multiprocessors: 108
+    * A100-specific: TF32 enabled, optimized batch sizes
+
+A100-Optimized Configuration:
+  - A100 GPUs detected: 4
+  - Each GPU: 6 models with batch size 32
+  - Total workers: 4 × 6 = 24
+  - Mixed precision: True
+  - GPU memory fraction: 0.85
+  - TF32 acceleration: ENABLED for A100
+  - Sequential model loading: ENABLED
+  - Enhanced I/O: RICH FORMATTING with metadata
+  - Expected GPU utilization: 90-98% (A100-optimized)
+  - Estimated throughput: 12.0-19.2 videos/second
+
+Enhanced Output Features:
+  - JSON: Complete metadata with confidence scores and word counts
+  - TXT: Structured format with headers, summaries, and statistics
+  - Segment metadata: frame indices, chunk tracking, merge flags
+  - Performance metrics: words/minute, processing rates, durations
+  - Human-readable: Clear section separators and organized layout
+ENHANCED WHISPER PROCESSING SYSTEM:
+======================================================================
+Hardware-Specific Optimization:
+  - Target: 4x NVIDIA A100-SXM4-80GB
+  - Memory per GPU: 80GB
+  - Optimized for large-scale processing
+GPU Setup (A100-Optimized):
+  - Using 4 GPUs
+  - 6 models per GPU
+  - 24 total workers
+CUDA Optimizations:
+  - Mixed precision: True
+  - TF32 enabled for A100
+  - GPU memory fraction: 0.85
+  - Batch size: 32 segments
+  - Segment batch size: 64
+Output Format Enhancements:
+  - JSON: Complete metadata with rich segment info
+  - TXT: Structured format with headers, metadata, and statistics
+  - Enhanced metadata: word counts, confidence scores, chunk tracking
+  - Segment grouping: intelligent merging across 20s boundaries
+  - Summary statistics: duration, word rates, processing metrics
+PyTorch version: 2.7.0+cu126
+Multiprocessing method: spawn
+FFmpeg found.
+Reading video file paths from /user/zhangyizhe/whisper_module/target.txt...
+Found 10323 videos to process
+Work distribution: 430.1 videos per worker on average
+Added 10323 videos and 24 sentinels to queue
+Starting 24 workers with enhanced formatting...
+Starting worker 1/24: GPU-0, Model-1
+Starting worker 2/24: GPU-0, Model-2
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:0 (Model GPU0-M1)
+Starting worker 3/24: GPU-0, Model-3
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:0 (Model GPU0-M2)
+Starting worker 4/24: GPU-0, Model-4
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:0 (Model GPU0-M3)
+Starting worker 5/24: GPU-0, Model-5
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:0 (Model GPU0-M4)
+Starting worker 6/24: GPU-0, Model-6
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:0 (Model GPU0-M5)
+Starting worker 7/24: GPU-1, Model-1
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:0 (Model GPU0-M6)
+Starting worker 8/24: GPU-1, Model-2
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:1 (Model GPU1-M1)
+Starting worker 9/24: GPU-1, Model-3
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:1 (Model GPU1-M2)
+Starting worker 10/24: GPU-1, Model-4
+Model GPU0-M1 optimized with FP16 precision for A100
+Model GPU0-M1 enabled TF32 for A100 acceleration
+Model GPU0-M1 loaded successfully on cuda:0!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 11/24: GPU-1, Model-5
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:1 (Model GPU1-M3)
+Model GPU0-M2 optimized with FP16 precision for A100
+Model GPU0-M2 enabled TF32 for A100 acceleration
+Model GPU0-M2 loaded successfully on cuda:0!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 12/24: GPU-1, Model-6
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:1 (Model GPU1-M4)
+Model GPU0-M3 optimized with FP16 precision for A100
+Model GPU0-M3 enabled TF32 for A100 acceleration
+Model GPU0-M3 loaded successfully on cuda:0!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 13/24: GPU-2, Model-1
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:1 (Model GPU1-M5)
+Model GPU0-M4 optimized with FP16 precision for A100
+Model GPU0-M4 enabled TF32 for A100 acceleration
+Model GPU0-M4 loaded successfully on cuda:0!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 14/24: GPU-2, Model-2
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:1 (Model GPU1-M6)
+Model GPU0-M5 optimized with FP16 precision for A100
+Model GPU0-M5 enabled TF32 for A100 acceleration
+Model GPU0-M5 loaded successfully on cuda:0!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 15/24: GPU-2, Model-3
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:2 (Model GPU2-M1)
+Model GPU0-M6 optimized with FP16 precision for A100
+Model GPU0-M6 enabled TF32 for A100 acceleration
+Model GPU0-M6 loaded successfully on cuda:0!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 16/24: GPU-2, Model-4
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:2 (Model GPU2-M2)
+Model GPU1-M1 optimized with FP16 precision for A100
+Model GPU1-M1 enabled TF32 for A100 acceleration
+Model GPU1-M1 loaded successfully on cuda:1!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 17/24: GPU-2, Model-5
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:2 (Model GPU2-M3)
+Model GPU1-M2 optimized with FP16 precision for A100
+Model GPU1-M2 enabled TF32 for A100 acceleration
+Model GPU1-M2 loaded successfully on cuda:1!
+Starting worker 18/24: GPU-2, Model-6
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:2 (Model GPU2-M4)
+Model GPU1-M3 optimized with FP16 precision for A100
+Model GPU1-M3 enabled TF32 for A100 acceleration
+Model GPU1-M3 loaded successfully on cuda:1!
+Starting worker 19/24: GPU-3, Model-1
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:2 (Model GPU2-M5)
+Starting worker 20/24: GPU-3, Model-2
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Model GPU1-M4 optimized with FP16 precision for A100
+Model GPU1-M4 enabled TF32 for A100 acceleration
+Model GPU1-M4 loaded successfully on cuda:1!
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:2 (Model GPU2-M6)
+Starting worker 21/24: GPU-3, Model-3
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:3 (Model GPU3-M1)
+Model GPU1-M5 optimized with FP16 precision for A100
+Model GPU1-M5 enabled TF32 for A100 acceleration
+Model GPU1-M5 loaded successfully on cuda:1!
+Starting worker 22/24: GPU-3, Model-4
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:3 (Model GPU3-M2)
+Model GPU1-M6 optimized with FP16 precision for A100
+Model GPU1-M6 enabled TF32 for A100 acceleration
+Model GPU1-M6 loaded successfully on cuda:1!
+Starting worker 23/24: GPU-3, Model-5
+Model GPU2-M1 optimized with FP16 precision for A100
+Model GPU2-M1 enabled TF32 for A100 acceleration
+Model GPU2-M1 loaded successfully on cuda:2!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:3 (Model GPU3-M3)
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Starting worker 24/24: GPU-3, Model-6
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:3 (Model GPU3-M4)
+Model GPU2-M2 optimized with FP16 precision for A100
+Model GPU2-M2 enabled TF32 for A100 acceleration
+Model GPU2-M2 loaded successfully on cuda:2!
+All 24 workers started with enhanced formatting!
+Enhanced Processing:   0%|          | 0/10323 [00:00<?, ?video/s]Enhanced Processing:   0%|          | 0/10323 [00:00<?, ?video/s, Success=0, Errors=0, Skipped=1, Rate=294.23/s]                                                                                                                W0-GPU0-M1: prvAQhi-7zI.mp4 (already processed)
+Enhanced Processing:   0%|          | 0/10323 [00:00<?, ?video/s, Success=0, Errors=0, Skipped=1, Rate=294.23/s]Enhanced Processing:   0%|          | 1/10323 [00:00<00:06, 1620.05video/s, Success=0, Errors=0, Skipped=2, Rate=522.52/s]                                                                                                                          W0-GPU0-M1: ttMUXGNt3qI.mp4 (already processed)
+Enhanced Processing:   0%|          | 1/10323 [00:00<00:07, 1343.90video/s, Success=0, Errors=0, Skipped=2, Rate=522.52/s]Enhanced Processing:   0%|          | 2/10323 [00:00<00:04, 2352.39video/s, Success=0, Errors=0, Skipped=3, Rate=738.30/s]                                                                                                                          W0-GPU0-M1: MngCvPNj5qU.mp4 (already processed)
+Enhanced Processing:   0%|          | 2/10323 [00:00<00:04, 2162.57video/s, Success=0, Errors=0, Skipped=3, Rate=738.30/s]Enhanced Processing:   0%|          | 3/10323 [00:00<00:03, 2953.04video/s, Success=0, Errors=0, Skipped=4, Rate=945.67/s]                                                                                                                          W0-GPU0-M1: ByDntUAaAOc.mp4 (already processed)
+Enhanced Processing:   0%|          | 3/10323 [00:00<00:03, 2724.75video/s, Success=0, Errors=0, Skipped=4, Rate=945.67/s]Enhanced Processing:   0%|          | 4/10323 [00:00<00:03, 3381.14video/s, Success=0, Errors=0, Skipped=5, Rate=1135.87/s]                                                                                                                           W0-GPU0-M1: Kunl6eQXrkQ.mp4 (already processed)
+Enhanced Processing:   0%|          | 4/10323 [00:00<00:03, 3207.88video/s, Success=0, Errors=0, Skipped=5, Rate=1135.87/s]Enhanced Processing:   0%|          | 5/10323 [00:00<00:02, 3640.26video/s, Success=0, Errors=0, Skipped=6, Rate=1307.04/s]                                                                                                                           W0-GPU0-M1: DTEWLRVcC1A.mp4 (already processed)
+Enhanced Processing:   0%|          | 5/10323 [00:00<00:03, 3413.89video/s, Success=0, Errors=0, Skipped=6, Rate=1307.04/s]Enhanced Processing:   0%|          | 6/10323 [00:00<00:02, 3860.97video/s, Success=0, Errors=0, Skipped=7, Rate=1466.61/s]                                                                                                                           W0-GPU0-M1: P07rXkGWrcs.mp4 (already processed)
+Enhanced Processing:   0%|          | 6/10323 [00:00<00:02, 3707.95video/s, Success=0, Errors=0, Skipped=7, Rate=1466.61/s]Enhanced Processing:   0%|          | 7/10323 [00:00<00:02, 4122.46video/s, Success=0, Errors=0, Skipped=8, Rate=1627.04/s]                                                                                                                           W1-GPU0-M2: fyx1jrUCgxY.mp4 (already processed)
+Enhanced Processing:   0%|          | 7/10323 [00:00<00:02, 3978.34video/s, Success=0, Errors=0, Skipped=8, Rate=1627.04/s]Enhanced Processing:   0%|          | 8/10323 [00:00<00:02, 4345.87video/s, Success=0, Errors=0, Skipped=9, Rate=1778.25/s]                                                                                                                           W1-GPU0-M2: oblQ0uav0Tc.mp4 (already processed)
+Enhanced Processing:   0%|          | 8/10323 [00:00<00:02, 4213.26video/s, Success=0, Errors=0, Skipped=9, Rate=1778.25/s]Enhanced Processing:   0%|          | 9/10323 [00:00<00:02, 4565.64video/s, Success=0, Errors=0, Skipped=10, Rate=1926.29/s]                                                                                                                            W1-GPU0-M2: d8dPGb8SkjQ.mp4 (already processed)
+Enhanced Processing:   0%|          | 9/10323 [00:00<00:02, 4435.81video/s, Success=0, Errors=0, Skipped=10, Rate=1926.29/s]Enhanced Processing:   0%|          | 10/10323 [00:00<00:02, 4771.68video/s, Success=0, Errors=0, Skipped=11, Rate=2069.22/s]                                                                                                                             W1-GPU0-M2: 8GvDrZdYGXA.mp4 (already processed)
+Enhanced Processing:   0%|          | 10/10323 [00:00<00:02, 4642.28video/s, Success=0, Errors=0, Skipped=11, Rate=2069.22/s]Enhanced Processing:   0%|          | 11/10323 [00:00<00:02, 4949.30video/s, Success=0, Errors=0, Skipped=12, Rate=2204.63/s]                                                                                                                             W1-GPU0-M2: MAPKiuowpOI.mp4 (already processed)
+Enhanced Processing:   0%|          | 11/10323 [00:00<00:02, 4827.60video/s, Success=0, Errors=0, Skipped=12, Rate=2204.63/s]Enhanced Processing:   0%|          | 12/10323 [00:00<00:02, 5115.52video/s, Success=0, Errors=0, Skipped=13, Rate=2335.36/s]                                                                                                                             W1-GPU0-M2: 4ux0tiWwUKc.mp4 (already processed)
+Enhanced Processing:   0%|          | 12/10323 [00:00<00:02, 4995.20video/s, Success=0, Errors=0, Skipped=13, Rate=2335.36/s]Enhanced Processing:   0%|          | 13/10323 [00:00<00:01, 5262.11video/s, Success=0, Errors=0, Skipped=14, Rate=2460.00/s]                                                                                                                             W3-GPU0-M4: EfoTSxolLMI.mp4 (already processed)
+Enhanced Processing:   0%|          | 13/10323 [00:00<00:02, 5144.93video/s, Success=0, Errors=0, Skipped=14, Rate=2460.00/s]Enhanced Processing:   0%|          | 14/10323 [00:00<00:01, 5396.59video/s, Success=0, Errors=0, Skipped=15, Rate=2579.63/s]                                                                                                                             W3-GPU0-M4: 64lOp1pBVPo.mp4 (already processed)
+Enhanced Processing:   0%|          | 14/10323 [00:00<00:01, 5282.97video/s, Success=0, Errors=0, Skipped=15, Rate=2579.63/s]Enhanced Processing:   0%|          | 15/10323 [00:00<00:01, 5521.24video/s, Success=0, Errors=0, Skipped=16, Rate=2694.70/s]                                                                                                                             W3-GPU0-M4: qHZagvfQC4A.mp4 (already processed)
+Enhanced Processing:   0%|          | 15/10323 [00:00<00:01, 5410.61video/s, Success=0, Errors=0, Skipped=16, Rate=2694.70/s]Enhanced Processing:   0%|          | 16/10323 [00:00<00:01, 5614.86video/s, Success=0, Errors=0, Skipped=17, Rate=2802.03/s]                                                                                                                             W3-GPU0-M4: mACkkkbnpoE.mp4 (already processed)
+Enhanced Processing:   0%|          | 16/10323 [00:00<00:01, 5438.32video/s, Success=0, Errors=0, Skipped=17, Rate=2802.03/s]Enhanced Processing:   0%|          | 17/10323 [00:00<00:01, 5568.82video/s, Success=0, Errors=0, Skipped=18, Rate=2872.70/s]                                                                                                                             W3-GPU0-M4: IeEMaFA28VA.mp4 (already processed)
+Enhanced Processing:   0%|          | 17/10323 [00:00<00:01, 5414.06video/s, Success=0, Errors=0, Skipped=18, Rate=2872.70/s]Enhanced Processing:   0%|          | 18/10323 [00:00<00:01, 5553.33video/s, Success=0, Errors=0, Skipped=19, Rate=2942.61/s]                                                                                                                             W3-GPU0-M4: nbVGDpPHmgY.mp4 (already processed)
+Enhanced Processing:   0%|          | 18/10323 [00:00<00:01, 5401.94video/s, Success=0, Errors=0, Skipped=19, Rate=2942.61/s]Enhanced Processing:   0%|          | 19/10323 [00:00<00:01, 5530.31video/s, Success=0, Errors=0, Skipped=20, Rate=3007.64/s]                                                                                                                             W3-GPU0-M4: znbEHCC-Ts8.mp4 (already processed)
+Enhanced Processing:   0%|          | 19/10323 [00:00<00:01, 5390.04video/s, Success=0, Errors=0, Skipped=20, Rate=3007.64/s]Enhanced Processing:   0%|          | 20/10323 [00:00<00:01, 5504.70video/s, Success=0, Errors=0, Skipped=21, Rate=3067.51/s]                                                                                                                             W3-GPU0-M4: E8jjZoOsBdU.mp4 (already processed)
+Enhanced Processing:   0%|          | 20/10323 [00:00<00:01, 5362.87video/s, Success=0, Errors=0, Skipped=21, Rate=3067.51/s]Enhanced Processing:   0%|          | 21/10323 [00:00<00:01, 5447.48video/s, Success=0, Errors=0, Skipped=22, Rate=3113.92/s]                                                                                                                             W3-GPU0-M4: FWhfTvXkQE8.mp4 (already processed)
+Enhanced Processing:   0%|          | 21/10323 [00:00<00:01, 5298.07video/s, Success=0, Errors=0, Skipped=22, Rate=3113.92/s]Enhanced Processing:   0%|          | 22/10323 [00:00<00:01, 5392.08video/s, Success=0, Errors=0, Skipped=23, Rate=3153.72/s]                                                                                                                             W3-GPU0-M4: WBQLrDKEVgM.mp4 (already processed)
+Enhanced Processing:   0%|          | 22/10323 [00:00<00:01, 5268.62video/s, Success=0, Errors=0, Skipped=23, Rate=3153.72/s]Enhanced Processing:   0%|          | 23/10323 [00:00<00:01, 5320.08video/s, Success=0, Errors=0, Skipped=24, Rate=3186.96/s]                                                                                                                             W3-GPU0-M4: b9Qc0B4XuGw.mp4 (already processed)
+Enhanced Processing:   0%|          | 23/10323 [00:00<00:01, 5202.17video/s, Success=0, Errors=0, Skipped=24, Rate=3186.96/s]Enhanced Processing:   0%|          | 24/10323 [00:00<00:01, 5288.88video/s, Success=0, Errors=0, Skipped=25, Rate=3226.59/s]                                                                                                                             W3-GPU0-M4: lzEUw2Ww0z4.mp4 (already processed)
+Enhanced Processing:   0%|          | 24/10323 [00:00<00:01, 5167.79video/s, Success=0, Errors=0, Skipped=25, Rate=3226.59/s]Enhanced Processing:   0%|          | 25/10323 [00:00<00:01, 5254.97video/s, Success=0, Errors=0, Skipped=26, Rate=3262.29/s]                                                                                                                             W3-GPU0-M4: ytgzQcW7UfM.mp4 (already processed)
+Enhanced Processing:   0%|          | 25/10323 [00:00<00:02, 5132.28video/s, Success=0, Errors=0, Skipped=26, Rate=3262.29/s]Enhanced Processing:   0%|          | 26/10323 [00:00<00:01, 5217.05video/s, Success=0, Errors=0, Skipped=27, Rate=3294.05/s]                                                                                                                             W3-GPU0-M4: MPniJfQeBK0.mp4 (already processed)
+Enhanced Processing:   0%|          | 26/10323 [00:00<00:02, 5123.42video/s, Success=0, Errors=0, Skipped=27, Rate=3294.05/s]Enhanced Processing:   0%|          | 27/10323 [00:00<00:01, 5200.74video/s, Success=0, Errors=0, Skipped=28, Rate=3331.36/s]                                                                                                                             W3-GPU0-M4: CQ7B_6_ImsI.mp4 (already processed)
+Enhanced Processing:   0%|          | 27/10323 [00:00<00:02, 5085.60video/s, Success=0, Errors=0, Skipped=28, Rate=3331.36/s]Enhanced Processing:   0%|          | 28/10323 [00:00<00:01, 5155.20video/s, Success=0, Errors=0, Skipped=29, Rate=3355.26/s]                                                                                                                             W3-GPU0-M4: 1sw2lctH2vQ.mp4 (already processed)
+Enhanced Processing:   0%|          | 28/10323 [00:00<00:02, 5064.71video/s, Success=0, Errors=0, Skipped=29, Rate=3355.26/s]Enhanced Processing:   0%|          | 29/10323 [00:00<00:02, 5141.60video/s, Success=0, Errors=0, Skipped=30, Rate=3389.61/s]                                                                                                                             W3-GPU0-M4: kDlWdKG2zXo.mp4 (already processed)
+Enhanced Processing:   0%|          | 29/10323 [00:00<00:02, 5053.17video/s, Success=0, Errors=0, Skipped=30, Rate=3389.61/s]Enhanced Processing:   0%|          | 30/10323 [00:00<00:02, 5112.93video/s, Success=0, Errors=0, Skipped=31, Rate=3414.57/s]                                                                                                                             W3-GPU0-M4: isfSTfjwlG4.mp4 (already processed)
+Enhanced Processing:   0%|          | 30/10323 [00:00<00:02, 5027.33video/s, Success=0, Errors=0, Skipped=31, Rate=3414.57/s]Enhanced Processing:   0%|          | 31/10323 [00:00<00:02, 5090.77video/s, Success=0, Errors=0, Skipped=32, Rate=3440.60/s]                                                                                                                             W3-GPU0-M4: cylYroKVHGU.mp4 (already processed)
+Enhanced Processing:   0%|          | 31/10323 [00:00<00:02, 5010.34video/s, Success=0, Errors=0, Skipped=32, Rate=3440.60/s]Enhanced Processing:   0%|          | 32/10323 [00:00<00:02, 5068.45video/s, Success=0, Errors=0, Skipped=33, Rate=3466.28/s]                                                                                                                             W3-GPU0-M4: W1o1QwKSJtE.mp4 (already processed)
+Enhanced Processing:   0%|          | 32/10323 [00:00<00:02, 4974.90video/s, Success=0, Errors=0, Skipped=33, Rate=3466.28/s]Enhanced Processing:   0%|          | 33/10323 [00:00<00:02, 5026.04video/s, Success=0, Errors=0, Skipped=34, Rate=3477.27/s]                                                                                                                             W3-GPU0-M4: xb9Zqpi6XfU.mp4 (already processed)
+Enhanced Processing:   0%|          | 33/10323 [00:00<00:02, 4957.27video/s, Success=0, Errors=0, Skipped=34, Rate=3477.27/s]Enhanced Processing:   0%|          | 34/10323 [00:00<00:02, 5036.78video/s, Success=0, Errors=0, Skipped=35, Rate=3510.80/s]                                                                                                                             W3-GPU0-M4: lcF5dHCWDdM.mp4 (already processed)
+Enhanced Processing:   0%|          | 34/10323 [00:00<00:02, 4985.89video/s, Success=0, Errors=0, Skipped=35, Rate=3510.80/s]Enhanced Processing:   0%|          | 35/10323 [00:00<00:02, 5081.89video/s, Success=0, Errors=0, Skipped=36, Rate=3561.45/s]                                                                                                                             W3-GPU0-M4: vtbh3yD4F-8.mp4 (already processed)
+Enhanced Processing:   0%|          | 35/10323 [00:00<00:02, 5040.71video/s, Success=0, Errors=0, Skipped=36, Rate=3561.45/s]Enhanced Processing:   0%|          | 36/10323 [00:00<00:02, 5129.78video/s, Success=0, Errors=0, Skipped=37, Rate=3613.84/s]                                                                                                                             W3-GPU0-M4: 2WJbrA9vzlw.mp4 (already processed)
+Enhanced Processing:   0%|          | 36/10323 [00:00<00:02, 5089.49video/s, Success=0, Errors=0, Skipped=37, Rate=3613.84/s]Enhanced Processing:   0%|          | 37/10323 [00:00<00:01, 5182.30video/s, Success=0, Errors=0, Skipped=38, Rate=3667.70/s]                                                                                                                             W3-GPU0-M4: l6Q3GvR1DRU.mp4 (already processed)
+Enhanced Processing:   0%|          | 37/10323 [00:00<00:02, 5142.46video/s, Success=0, Errors=0, Skipped=38, Rate=3667.70/s]Enhanced Processing:   0%|          | 38/10323 [00:00<00:01, 5234.61video/s, Success=0, Errors=0, Skipped=39, Rate=3721.06/s]                                                                                                                             W3-GPU0-M4: uXj1Ghz0p80.mp4 (already processed)
+Enhanced Processing:   0%|          | 38/10323 [00:00<00:01, 5195.71video/s, Success=0, Errors=0, Skipped=39, Rate=3721.06/s]Enhanced Processing:   0%|          | 39/10323 [00:00<00:01, 5282.50video/s, Success=0, Errors=0, Skipped=40, Rate=3772.28/s]                                                                                                                             W3-GPU0-M4: 97YrTLpnAGg.mp4 (already processed)
+Enhanced Processing:   0%|          | 39/10323 [00:00<00:01, 5241.54video/s, Success=0, Errors=0, Skipped=40, Rate=3772.28/s]Enhanced Processing:   0%|          | 40/10323 [00:00<00:01, 5327.96video/s, Success=0, Errors=0, Skipped=41, Rate=3821.65/s]                                                                                                                             W3-GPU0-M4: t4Yr-ur5PCw.mp4 (already processed)
+Enhanced Processing:   0%|          | 40/10323 [00:00<00:01, 5289.33video/s, Success=0, Errors=0, Skipped=41, Rate=3821.65/s]Enhanced Processing:   0%|          | 41/10323 [00:00<00:01, 5374.29video/s, Success=0, Errors=0, Skipped=42, Rate=3871.07/s]                                                                                                                             W3-GPU0-M4: XRU5QnPjrXE.mp4 (already processed)
+Enhanced Processing:   0%|          | 41/10323 [00:00<00:01, 5335.27video/s, Success=0, Errors=0, Skipped=42, Rate=3871.07/s]Enhanced Processing:   0%|          | 42/10323 [00:00<00:01, 5419.16video/s, Success=0, Errors=0, Skipped=43, Rate=3919.40/s]                                                                                                                             W3-GPU0-M4: G5-EZsBB7bY.mp4 (already processed)
+Enhanced Processing:   0%|          | 42/10323 [00:00<00:01, 5375.67video/s, Success=0, Errors=0, Skipped=43, Rate=3919.40/s]Enhanced Processing:   0%|          | 43/10323 [00:00<00:01, 5455.39video/s, Success=0, Errors=0, Skipped=44, Rate=3962.92/s]                                                                                                                             W4-GPU0-M5: qRSAi_6I7q4.mp4 (already processed)
+Enhanced Processing:   0%|          | 43/10323 [00:00<00:01, 5415.74video/s, Success=0, Errors=0, Skipped=44, Rate=3962.92/s]Enhanced Processing:   0%|          | 44/10323 [00:00<00:01, 5494.99video/s, Success=0, Errors=0, Skipped=45, Rate=4007.98/s]                                                                                                                             W4-GPU0-M5: 1N-8SsRsx8k.mp4 (already processed)
+Enhanced Processing:   0%|          | 44/10323 [00:00<00:01, 5456.49video/s, Success=0, Errors=0, Skipped=45, Rate=4007.98/s]Enhanced Processing:   0%|          | 45/10323 [00:00<00:01, 5535.17video/s, Success=0, Errors=0, Skipped=46, Rate=4052.55/s]                                                                                                                             W4-GPU0-M5: RANQcnCrZw0.mp4 (already processed)
+Enhanced Processing:   0%|          | 45/10323 [00:00<00:01, 5496.00video/s, Success=0, Errors=0, Skipped=46, Rate=4052.55/s]Enhanced Processing:   0%|          | 46/10323 [00:00<00:01, 5573.34video/s, Success=0, Errors=0, Skipped=47, Rate=4096.00/s]                                                                                                                             W4-GPU0-M5: io8qaaBVoYY.mp4 (already processed)
+Enhanced Processing:   0%|          | 46/10323 [00:00<00:01, 5536.24video/s, Success=0, Errors=0, Skipped=47, Rate=4096.00/s]Enhanced Processing:   0%|          | 47/10323 [00:00<00:01, 5612.63video/s, Success=0, Errors=0, Skipped=48, Rate=4139.71/s]                                                                                                                             W4-GPU0-M5: xvewzKpRBBI.mp4 (already processed)
+Enhanced Processing:   0%|          | 47/10323 [00:00<00:01, 5574.22video/s, Success=0, Errors=0, Skipped=48, Rate=4139.71/s]Enhanced Processing:   0%|          | 48/10323 [00:00<00:01, 5648.26video/s, Success=0, Errors=0, Skipped=49, Rate=4181.08/s]                                                                                                                             W4-GPU0-M5: pWNQef4m4Z4.mp4 (already processed)
+Enhanced Processing:   0%|          | 48/10323 [00:00<00:01, 5611.89video/s, Success=0, Errors=0, Skipped=49, Rate=4181.08/s]Enhanced Processing:   0%|          | 49/10323 [00:00<00:01, 5686.01video/s, Success=0, Errors=0, Skipped=50, Rate=4223.53/s]                                                                                                                             W4-GPU0-M5: 1EIGYeUWd6g.mp4 (already processed)
+Enhanced Processing:   0%|          | 49/10323 [00:00<00:01, 5649.44video/s, Success=0, Errors=0, Skipped=50, Rate=4223.53/s]Enhanced Processing:   0%|          | 50/10323 [00:00<00:01, 5722.26video/s, Success=0, Errors=0, Skipped=51, Rate=4264.54/s]                                                                                                                             W4-GPU0-M5: 8_ql5B2FC4Q.mp4 (already processed)
+Enhanced Processing:   0%|          | 50/10323 [00:00<00:01, 5685.50video/s, Success=0, Errors=0, Skipped=51, Rate=4264.54/s]Enhanced Processing:   0%|          | 51/10323 [00:00<00:01, 5752.73video/s, Success=0, Errors=0, Skipped=52, Rate=4302.36/s]                                                                                                                             W4-GPU0-M5: GGIU15bIiwo.mp4 (already processed)
+Enhanced Processing:   0%|          | 51/10323 [00:00<00:01, 5706.69video/s, Success=0, Errors=0, Skipped=52, Rate=4302.36/s]Enhanced Processing:   1%|          | 52/10323 [00:00<00:01, 5775.60video/s, Success=0, Errors=0, Skipped=53, Rate=4335.66/s]                                                                                                                             W4-GPU0-M5: rv4rrqH7DaE.mp4 (already processed)
+Enhanced Processing:   1%|          | 52/10323 [00:00<00:01, 5733.69video/s, Success=0, Errors=0, Skipped=53, Rate=4335.66/s]Enhanced Processing:   1%|          | 53/10323 [00:00<00:01, 5801.55video/s, Success=0, Errors=0, Skipped=54, Rate=4370.25/s]                                                                                                                             W4-GPU0-M5: xp2ZugTUnHo.mp4 (already processed)
+Enhanced Processing:   1%|          | 53/10323 [00:00<00:01, 5767.39video/s, Success=0, Errors=0, Skipped=54, Rate=4370.25/s]Enhanced Processing:   1%|          | 54/10323 [00:00<00:01, 5835.33video/s, Success=0, Errors=0, Skipped=55, Rate=4408.98/s]                                                                                                                             W4-GPU0-M5: gl-mH-KCjq8.mp4 (already processed)
+Enhanced Processing:   1%|          | 54/10323 [00:00<00:01, 5783.18video/s, Success=0, Errors=0, Skipped=55, Rate=4408.98/s]Enhanced Processing:   1%|          | 55/10323 [00:00<00:01, 5848.76video/s, Success=0, Errors=0, Skipped=56, Rate=4435.90/s]                                                                                                                             W4-GPU0-M5: BMuLOnLNBrI.mp4 (already processed)
+Enhanced Processing:   1%|          | 55/10323 [00:00<00:01, 5813.68video/s, Success=0, Errors=0, Skipped=56, Rate=4435.90/s]Enhanced Processing:   1%|          | 56/10323 [00:00<00:01, 5879.08video/s, Success=0, Errors=0, Skipped=57, Rate=4471.71/s]                                                                                                                             W5-GPU0-M6: OrbM2Y1Bisw.mp4 (already processed)
+Enhanced Processing:   1%|          | 56/10323 [00:00<00:01, 5844.56video/s, Success=0, Errors=0, Skipped=57, Rate=4471.71/s]Enhanced Processing:   1%|          | 57/10323 [00:00<00:01, 5908.78video/s, Success=0, Errors=0, Skipped=58, Rate=4507.50/s]                                                                                                                             W5-GPU0-M6: F0L-rSdrJ_8.mp4 (already processed)
+Enhanced Processing:   1%|          | 57/10323 [00:00<00:01, 5874.81video/s, Success=0, Errors=0, Skipped=58, Rate=4507.50/s]Enhanced Processing:   1%|          | 58/10323 [00:00<00:01, 5937.75video/s, Success=0, Errors=0, Skipped=59, Rate=4542.29/s]                                                                                                                             W5-GPU0-M6: yfusK1_kXsc.mp4 (already processed)
+Enhanced Processing:   1%|          | 58/10323 [00:00<00:01, 5900.45video/s, Success=0, Errors=0, Skipped=59, Rate=4542.29/s]Enhanced Processing:   1%|          | 59/10323 [00:00<00:01, 5960.40video/s, Success=0, Errors=0, Skipped=60, Rate=4573.44/s]                                                                                                                             W5-GPU0-M6: QqFwwkLLLsA.mp4 (already processed)
+Enhanced Processing:   1%|          | 59/10323 [00:00<00:01, 5926.43video/s, Success=0, Errors=0, Skipped=60, Rate=4573.44/s]Enhanced Processing:   1%|          | 60/10323 [00:00<00:01, 5986.73video/s, Success=0, Errors=0, Skipped=61, Rate=4606.06/s]                                                                                                                             W5-GPU0-M6: v_aitVTIg6U.mp4 (already processed)
+Enhanced Processing:   1%|          | 60/10323 [00:00<00:01, 5953.73video/s, Success=0, Errors=0, Skipped=61, Rate=4606.06/s]Enhanced Processing:   1%|          | 61/10323 [00:00<00:01, 6014.40video/s, Success=0, Errors=0, Skipped=62, Rate=4639.14/s]                                                                                                                             W5-GPU0-M6: qufJe9Pm5PA.mp4 (already processed)
+Enhanced Processing:   1%|          | 61/10323 [00:00<00:01, 5981.22video/s, Success=0, Errors=0, Skipped=62, Rate=4639.14/s]Enhanced Processing:   1%|          | 62/10323 [00:00<00:01, 6038.89video/s, Success=0, Errors=0, Skipped=63, Rate=4670.80/s]                                                                                                                             W5-GPU0-M6: 5sSt3JomTmg.mp4 (already processed)
+Enhanced Processing:   1%|          | 62/10323 [00:00<00:01, 6006.12video/s, Success=0, Errors=0, Skipped=63, Rate=4670.80/s]Enhanced Processing:   1%|          | 63/10323 [00:00<00:01, 6063.78video/s, Success=0, Errors=0, Skipped=64, Rate=4702.30/s]                                                                                                                             W5-GPU0-M6: RKcOhawLNY0.mp4 (already processed)
+Enhanced Processing:   1%|          | 63/10323 [00:00<00:01, 6028.64video/s, Success=0, Errors=0, Skipped=64, Rate=4702.30/s]Enhanced Processing:   1%|          | 64/10323 [00:00<00:01, 6085.73video/s, Success=0, Errors=0, Skipped=65, Rate=4731.35/s]                                                                                                                             W5-GPU0-M6: B_FIGgKTMSI.mp4 (already processed)
+Enhanced Processing:   1%|          | 64/10323 [00:00<00:01, 6053.48video/s, Success=0, Errors=0, Skipped=65, Rate=4731.35/s]Enhanced Processing:   1%|          | 65/10323 [00:00<00:01, 6110.31video/s, Success=0, Errors=0, Skipped=66, Rate=4762.40/s]                                                                                                                             W5-GPU0-M6: pmZ6GCB4y_0.mp4 (already processed)
+Enhanced Processing:   1%|          | 65/10323 [00:00<00:01, 6079.11video/s, Success=0, Errors=0, Skipped=66, Rate=4762.40/s]Enhanced Processing:   1%|          | 66/10323 [00:00<00:01, 6135.56video/s, Success=0, Errors=0, Skipped=67, Rate=4793.25/s]                                                                                                                             W5-GPU0-M6: nbjqux9AKas.mp4 (already processed)
+Enhanced Processing:   1%|          | 66/10323 [00:00<00:01, 6099.60video/s, Success=0, Errors=0, Skipped=67, Rate=4793.25/s]Enhanced Processing:   1%|          | 67/10323 [00:00<00:01, 6154.32video/s, Success=0, Errors=0, Skipped=68, Rate=4820.14/s]                                                                                                                             W5-GPU0-M6: jaH9yW_yg8s.mp4 (already processed)
+Enhanced Processing:   1%|          | 67/10323 [00:00<00:01, 6123.20video/s, Success=0, Errors=0, Skipped=68, Rate=4820.14/s]Enhanced Processing:   1%|          | 68/10323 [00:00<00:01, 6177.31video/s, Success=0, Errors=0, Skipped=69, Rate=4849.15/s]                                                                                                                             W5-GPU0-M6: wGr8FEAOdFs.mp4 (already processed)
+Enhanced Processing:   1%|          | 68/10323 [00:00<00:01, 6145.37video/s, Success=0, Errors=0, Skipped=69, Rate=4849.15/s]Enhanced Processing:   1%|          | 69/10323 [00:00<00:01, 6198.35video/s, Success=0, Errors=0, Skipped=70, Rate=4877.02/s]                                                                                                                             W5-GPU0-M6: YyMLAG4ZEng.mp4 (already processed)
+Enhanced Processing:   1%|          | 69/10323 [00:00<00:01, 6167.17video/s, Success=0, Errors=0, Skipped=70, Rate=4877.02/s]Enhanced Processing:   1%|          | 70/10323 [00:00<00:01, 6220.37video/s, Success=0, Errors=0, Skipped=71, Rate=4905.21/s]                                                                                                                             W5-GPU0-M6: KakbZ1Lir24.mp4 (already processed)
+Enhanced Processing:   1%|          | 70/10323 [00:00<00:01, 6190.20video/s, Success=0, Errors=0, Skipped=71, Rate=4905.21/s]Enhanced Processing:   1%|          | 71/10323 [00:00<00:01, 6242.96video/s, Success=0, Errors=0, Skipped=72, Rate=4933.51/s]                                                                                                                             W5-GPU0-M6: Kp-mXBYOg9k.mp4 (already processed)
+Enhanced Processing:   1%|          | 71/10323 [00:00<00:01, 6211.84video/s, Success=0, Errors=0, Skipped=72, Rate=4933.51/s]Enhanced Processing:   1%|          | 72/10323 [00:00<00:01, 6263.53video/s, Success=0, Errors=0, Skipped=73, Rate=4960.38/s]                                                                                                                             W5-GPU0-M6: UCSKWh4Fb9Y.mp4 (already processed)
+Enhanced Processing:   1%|          | 72/10323 [00:00<00:01, 6233.54video/s, Success=0, Errors=0, Skipped=73, Rate=4960.38/s]Enhanced Processing:   1%|          | 73/10323 [00:00<00:01, 6284.96video/s, Success=0, Errors=0, Skipped=74, Rate=4987.68/s]                                                                                                                             W5-GPU0-M6: KbEfJv1OMIg.mp4 (already processed)
+Enhanced Processing:   1%|          | 73/10323 [00:00<00:01, 6254.27video/s, Success=0, Errors=0, Skipped=74, Rate=4987.68/s]Enhanced Processing:   1%|          | 74/10323 [00:00<00:01, 6305.30video/s, Success=0, Errors=0, Skipped=75, Rate=5014.07/s]                                                                                                                             W7-GPU1-M2: LGVbsocWaSA.mp4 (already processed)
+Enhanced Processing:   1%|          | 74/10323 [00:00<00:01, 6275.85video/s, Success=0, Errors=0, Skipped=75, Rate=5014.07/s]Enhanced Processing:   1%|          | 75/10323 [00:00<00:01, 6322.69video/s, Success=0, Errors=0, Skipped=76, Rate=5038.60/s]                                                                                                                             W7-GPU1-M2: 8YSxZSQrFqQ.mp4 (already processed)
+Enhanced Processing:   1%|          | 75/10323 [00:00<00:01, 6293.47video/s, Success=0, Errors=0, Skipped=76, Rate=5038.60/s]Enhanced Processing:   1%|          | 76/10323 [00:00<00:01, 6343.75video/s, Success=0, Errors=0, Skipped=77, Rate=5065.11/s]                                                                                                                             W7-GPU1-M2: wCvO1LQNjO4.mp4 (already processed)
+Enhanced Processing:   1%|          | 76/10323 [00:00<00:01, 6315.10video/s, Success=0, Errors=0, Skipped=77, Rate=5065.11/s]Enhanced Processing:   1%|          | 77/10323 [00:00<00:01, 6364.65video/s, Success=0, Errors=0, Skipped=78, Rate=5091.52/s]                                                                                                                             W7-GPU1-M2: VRC4-FTeWsk.mp4 (already processed)
+Enhanced Processing:   1%|          | 77/10323 [00:00<00:01, 6335.93video/s, Success=0, Errors=0, Skipped=78, Rate=5091.52/s]Enhanced Processing:   1%|          | 78/10323 [00:00<00:01, 6384.15video/s, Success=0, Errors=0, Skipped=79, Rate=5116.98/s]                                                                                                                             W7-GPU1-M2: rhhciJKyDXk.mp4 (already processed)
+Enhanced Processing:   1%|          | 78/10323 [00:00<00:01, 6355.13video/s, Success=0, Errors=0, Skipped=79, Rate=5116.98/s]Enhanced Processing:   1%|          | 79/10323 [00:00<00:01, 6402.16video/s, Success=0, Errors=0, Skipped=80, Rate=5141.02/s]                                                                                                                             W7-GPU1-M2: mSrRKj9va5g.mp4 (already processed)
+Enhanced Processing:   1%|          | 79/10323 [00:00<00:01, 6373.46video/s, Success=0, Errors=0, Skipped=80, Rate=5141.02/s]Enhanced Processing:   1%|          | 80/10323 [00:00<00:01, 6419.44video/s, Success=0, Errors=0, Skipped=81, Rate=5164.85/s]                                                                                                                             W7-GPU1-M2: TW2wbMkSwMs.mp4 (already processed)
+Enhanced Processing:   1%|          | 80/10323 [00:00<00:01, 6390.96video/s, Success=0, Errors=0, Skipped=81, Rate=5164.85/s]Enhanced Processing:   1%|          | 81/10323 [00:00<00:01, 6437.49video/s, Success=0, Errors=0, Skipped=82, Rate=5188.62/s]                                                                                                                             W7-GPU1-M2: laiM4KB65Vo.mp4 (already processed)
+Enhanced Processing:   1%|          | 81/10323 [00:00<00:01, 6409.32video/s, Success=0, Errors=0, Skipped=82, Rate=5188.62/s]Enhanced Processing:   1%|          | 82/10323 [00:00<00:01, 6455.20video/s, Success=0, Errors=0, Skipped=83, Rate=5212.34/s]                                                                                                                             W8-GPU1-M3: lbUHxcY4TT0.mp4 (already processed)
+Enhanced Processing:   1%|          | 82/10323 [00:00<00:01, 6427.45video/s, Success=0, Errors=0, Skipped=83, Rate=5212.34/s]Enhanced Processing:   1%|          | 83/10323 [00:00<00:01, 6468.60video/s, Success=0, Errors=0, Skipped=84, Rate=5233.07/s]                                                                                                                             W8-GPU1-M3: xRLeGwCCDx8.mp4 (already processed)
+Enhanced Processing:   1%|          | 83/10323 [00:00<00:01, 6441.19video/s, Success=0, Errors=0, Skipped=84, Rate=5233.07/s]Enhanced Processing:   1%|          | 84/10323 [00:00<00:01, 6486.40video/s, Success=0, Errors=0, Skipped=85, Rate=5256.49/s]                                                                                                                             W10-GPU1-M5: lR3LrLizM_U.mp4 (already processed)
+Enhanced Processing:   1%|          | 84/10323 [00:00<00:01, 6458.10video/s, Success=0, Errors=0, Skipped=85, Rate=5256.49/s]Enhanced Processing:   1%|          | 85/10323 [00:00<00:01, 6502.20video/s, Success=0, Errors=0, Skipped=86, Rate=5278.09/s]                                                                                                                             W10-GPU1-M5: zWm4G_7l1jI.mp4 (already processed)
+Enhanced Processing:   1%|          | 85/10323 [00:00<00:01, 6474.45video/s, Success=0, Errors=0, Skipped=86, Rate=5278.09/s]Enhanced Processing:   1%|          | 86/10323 [00:00<00:01, 6519.13video/s, Success=0, Errors=0, Skipped=87, Rate=5300.45/s]                                                                                                                             W10-GPU1-M5: uokM79hXfRs.mp4 (already processed)
+Enhanced Processing:   1%|          | 86/10323 [00:00<00:01, 6492.26video/s, Success=0, Errors=0, Skipped=87, Rate=5300.45/s]Enhanced Processing:   1%|          | 87/10323 [00:00<00:01, 6528.39video/s, Success=0, Errors=0, Skipped=88, Rate=5318.12/s]                                                                                                                             W10-GPU1-M5: _BF0djMvfTI.mp4 (already processed)
+Enhanced Processing:   1%|          | 87/10323 [00:00<00:01, 6500.25video/s, Success=0, Errors=0, Skipped=88, Rate=5318.12/s]Enhanced Processing:   1%|          | 88/10323 [00:00<00:01, 6542.56video/s, Success=0, Errors=0, Skipped=89, Rate=5338.48/s]                                                                                                                             W10-GPU1-M5: 1XG9Jk544QE.mp4 (already processed)
+Enhanced Processing:   1%|          | 88/10323 [00:00<00:01, 6516.00video/s, Success=0, Errors=0, Skipped=89, Rate=5338.48/s]Enhanced Processing:   1%|          | 89/10323 [00:00<00:01, 6558.90video/s, Success=0, Errors=0, Skipped=90, Rate=5360.06/s]                                                                                                                             W10-GPU1-M5: ZqXkq_FtHFo.mp4 (already processed)
+Enhanced Processing:   1%|          | 89/10323 [00:00<00:01, 6532.04video/s, Success=0, Errors=0, Skipped=90, Rate=5360.06/s]Enhanced Processing:   1%|          | 90/10323 [00:00<00:01, 6574.03video/s, Success=0, Errors=0, Skipped=91, Rate=5380.95/s]                                                                                                                             W10-GPU1-M5: SNnTLtuRoLQ.mp4 (already processed)
+Enhanced Processing:   1%|          | 90/10323 [00:00<00:01, 6547.58video/s, Success=0, Errors=0, Skipped=91, Rate=5380.95/s]Enhanced Processing:   1%|          | 91/10323 [00:00<00:01, 6586.40video/s, Success=0, Errors=0, Skipped=92, Rate=5401.70/s]                                                                                                                             W11-GPU1-M6: IHmKomrRQH8.mp4 (already processed)
+Enhanced Processing:   1%|          | 91/10323 [00:00<00:01, 6560.02video/s, Success=0, Errors=0, Skipped=92, Rate=5401.70/s]Enhanced Processing:   1%|          | 92/10323 [00:00<00:01, 6601.70video/s, Success=0, Errors=0, Skipped=93, Rate=5420.50/s]                                                                                                                             W11-GPU1-M6: JFRyzgFNYNw.mp4 (already processed)
+Enhanced Processing:   1%|          | 92/10323 [00:00<00:01, 6575.71video/s, Success=0, Errors=0, Skipped=93, Rate=5420.50/s]Enhanced Processing:   1%|          | 93/10323 [00:00<00:01, 6616.97video/s, Success=0, Errors=0, Skipped=94, Rate=5440.98/s]                                                                                                                             W11-GPU1-M6: kR7GO2eYUwI.mp4 (already processed)
+Enhanced Processing:   1%|          | 93/10323 [00:00<00:01, 6591.59video/s, Success=0, Errors=0, Skipped=94, Rate=5440.98/s]Enhanced Processing:   1%|          | 94/10323 [00:00<00:01, 6632.98video/s, Success=0, Errors=0, Skipped=95, Rate=5461.93/s]                                                                                                                             W11-GPU1-M6: ZtFKkwcKV3o.mp4 (already processed)
+Enhanced Processing:   1%|          | 94/10323 [00:00<00:01, 6608.08video/s, Success=0, Errors=0, Skipped=95, Rate=5461.93/s]Enhanced Processing:   1%|          | 95/10323 [00:00<00:01, 6648.85video/s, Success=0, Errors=0, Skipped=96, Rate=5482.60/s]                                                                                                                             W11-GPU1-M6: wwxeDkcSHoI.mp4 (already processed)
+Enhanced Processing:   1%|          | 95/10323 [00:00<00:01, 6623.87video/s, Success=0, Errors=0, Skipped=96, Rate=5482.60/s]Enhanced Processing:   1%|          | 96/10323 [00:00<00:01, 6663.58video/s, Success=0, Errors=0, Skipped=97, Rate=5502.62/s]                                                                                                                             W11-GPU1-M6: J7E0ivHdcu4.mp4 (already processed)
+Enhanced Processing:   1%|          | 96/10323 [00:00<00:01, 6638.31video/s, Success=0, Errors=0, Skipped=97, Rate=5502.62/s]Model GPU2-M3 optimized with FP16 precision for A100
+Model GPU2-M3 enabled TF32 for A100 acceleration
+Model GPU2-M3 loaded successfully on cuda:2!
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:3 (Model GPU3-M5)
+Using ENVIRONMENT configuration:
+   - GPUs: 4
+   - Models per GPU: 6
+   - Total workers: 24
+FINAL CONFIGURATION:
+   NUM_GPUS = 4
+   MODELS_PER_GPU = 6
+   TOTAL_WORKERS = 24
+   BATCH_SIZE = 32
+Loading local model from: /user/zhangyizhe/whisper-large-v3/my_whisper_model on cuda:3 (Model GPU3-M6)
+Model GPU2-M4 optimized with FP16 precision for A100
+Model GPU2-M4 enabled TF32 for A100 acceleration
+Model GPU2-M4 loaded successfully on cuda:2!
+Model GPU2-M5 optimized with FP16 precision for A100
+Model GPU2-M5 enabled TF32 for A100 acceleration
+Model GPU2-M5 loaded successfully on cuda:2!
+Enhanced Processing:   1%|          | 97/10323 [00:04<07:22, 23.12video/s, Success=0, Errors=0, Skipped=98, Rate=23.34/s]                                                                                                                             W16-GPU2-M5: 6KCZGZRB0pU.mp4 (already processed)
+Enhanced Processing:   1%|          | 97/10323 [00:04<07:22, 23.12video/s, Success=0, Errors=0, Skipped=98, Rate=23.34/s]Enhanced Processing:   1%|          | 98/10323 [00:04<07:17, 23.35video/s, Success=0, Errors=0, Skipped=98, Rate=23.34/s]Enhanced Processing:   1%|          | 98/10323 [00:04<07:17, 23.35video/s, Success=0, Errors=0, Skipped=99, Rate=23.57/s]                                                                                                                         W16-GPU2-M5: QiDA17FXm1A.mp4 (already processed)
+Enhanced Processing:   1%|          | 98/10323 [00:04<07:17, 23.35video/s, Success=0, Errors=0, Skipped=99, Rate=23.57/s]Enhanced Processing:   1%|          | 99/10323 [00:04<07:17, 23.35video/s, Success=0, Errors=0, Skipped=100, Rate=23.65/s]                                                                                                                          W16-GPU2-M5: w7qoVaE1BLg.mp4 (already processed)
+Enhanced Processing:   1%|          | 99/10323 [00:04<07:17, 23.35video/s, Success=0, Errors=0, Skipped=100, Rate=23.65/s]Model GPU2-M6 optimized with FP16 precision for A100
+Model GPU2-M6 enabled TF32 for A100 acceleration
+Model GPU2-M6 loaded successfully on cuda:2!
+Enhanced Processing:   1%|          | 100/10323 [00:06<07:17, 23.35video/s, Success=0, Errors=0, Skipped=101, Rate=16.11/s]                                                                                                                           W17-GPU2-M6: cP1gE5PH1-M.mp4 (already processed)
+Enhanced Processing:   1%|          | 100/10323 [00:06<07:17, 23.35video/s, Success=0, Errors=0, Skipped=101, Rate=16.11/s]Enhanced Processing:   1%|          | 101/10323 [00:06<11:55, 14.30video/s, Success=0, Errors=0, Skipped=101, Rate=16.11/s]Enhanced Processing:   1%|          | 101/10323 [00:06<11:55, 14.30video/s, Success=0, Errors=0, Skipped=102, Rate=16.27/s]                                                                                                                           W17-GPU2-M6: PB-FnCChDQo.mp4 (already processed)
+Enhanced Processing:   1%|          | 101/10323 [00:06<11:55, 14.30video/s, Success=0, Errors=0, Skipped=102, Rate=16.27/s]Model GPU3-M1 optimized with FP16 precision for A100
+Model GPU3-M1 enabled TF32 for A100 acceleration
+Model GPU3-M1 loaded successfully on cuda:3!
+Model GPU3-M2 optimized with FP16 precision for A100
+Model GPU3-M2 enabled TF32 for A100 acceleration
+Model GPU3-M2 loaded successfully on cuda:3!
+Enhanced Processing:   1%|          | 102/10323 [00:09<11:55, 14.30video/s, Success=0, Errors=0, Skipped=103, Rate=10.80/s]                                                                                                                           W19-GPU3-M2: QlbILv5jWDo.mp4 (already processed)
+Enhanced Processing:   1%|          | 102/10323 [00:09<11:55, 14.30video/s, Success=0, Errors=0, Skipped=103, Rate=10.80/s]Enhanced Processing:   1%|          | 103/10323 [00:09<22:08,  7.69video/s, Success=0, Errors=0, Skipped=103, Rate=10.80/s]Model GPU3-M3 optimized with FP16 precision for A100
+Model GPU3-M3 enabled TF32 for A100 acceleration
+Model GPU3-M3 loaded successfully on cuda:3!
+Model GPU3-M4 optimized with FP16 precision for A100
+Model GPU3-M4 enabled TF32 for A100 acceleration
+Model GPU3-M4 loaded successfully on cuda:3!
+Enhanced Processing:   1%|          | 103/10323 [00:12<22:08,  7.69video/s, Success=0, Errors=0, Skipped=104, Rate=8.19/s]                                                                                                                           W21-GPU3-M4: BJgMX4P1ALk.mp4 (already processed)
+Enhanced Processing:   1%|          | 103/10323 [00:12<22:08,  7.69video/s, Success=0, Errors=0, Skipped=104, Rate=8.19/s]Enhanced Processing:   1%|          | 104/10323 [00:12<35:55,  4.74video/s, Success=0, Errors=0, Skipped=104, Rate=8.19/s]Model GPU3-M5 optimized with FP16 precision for A100
+Model GPU3-M5 enabled TF32 for A100 acceleration
+Model GPU3-M5 loaded successfully on cuda:3!
+Enhanced Processing:   1%|          | 104/10323 [00:14<35:55,  4.74video/s, Success=0, Errors=0, Skipped=105, Rate=7.44/s]                                                                                                                          W22-GPU3-M5: DO_S447L0sk.mp4 (already processed)
+Enhanced Processing:   1%|          | 104/10323 [00:14<35:55,  4.74video/s, Success=0, Errors=0, Skipped=105, Rate=7.44/s]Enhanced Processing:   1%|          | 105/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=105, Rate=7.44/s]Enhanced Processing:   1%|          | 105/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=106, Rate=7.51/s]                                                                                                                          W22-GPU3-M5: 4t3DP0U_cj4.mp4 (already processed)
+Enhanced Processing:   1%|          | 105/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=106, Rate=7.51/s]Enhanced Processing:   1%|          | 106/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=107, Rate=7.57/s]                                                                                                                          W22-GPU3-M5: jIVMABPYNlU.mp4 (already processed)
+Enhanced Processing:   1%|          | 106/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=107, Rate=7.57/s]Enhanced Processing:   1%|          | 107/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=108, Rate=7.64/s]                                                                                                                          W22-GPU3-M5: _Kg6RU9P3Kc.mp4 (already processed)
+Enhanced Processing:   1%|          | 107/10323 [00:14<43:27,  3.92video/s, Success=0, Errors=0, Skipped=108, Rate=7.64/s]Enhanced Processing:   1%|          | 108/10323 [00:14<43:26,  3.92video/s, Success=0, Errors=0, Skipped=109, Rate=7.71/s]                                                                                                                          W22-GPU3-M5: opN7IxsUP8I.mp4 (already processed)
+Enhanced Processing:   1%|          | 108/10323 [00:14<43:26,  3.92video/s, Success=0, Errors=0, Skipped=109, Rate=7.71/s]Enhanced Processing:   1%|          | 109/10323 [00:14<43:26,  3.92video/s, Success=0, Errors=0, Skipped=110, Rate=7.78/s]                                                                                                                          W22-GPU3-M5: vSg0FjMAGUM.mp4 (already processed)
+Enhanced Processing:   1%|          | 109/10323 [00:14<43:26,  3.92video/s, Success=0, Errors=0, Skipped=110, Rate=7.78/s]Model GPU3-M6 optimized with FP16 precision for A100
+Model GPU3-M6 enabled TF32 for A100 acceleration
+Model GPU3-M6 loaded successfully on cuda:3!
+./TranscriberOpt.sh: line 495: 4016841 Killed                  python3 "${python_args[@]}" 2>&1
+     4016842 Done                    | tee -a "$LOG_FILE"
+[0;31m[ERROR][0m 2025-07-07 16:35:26 - Whisper processing failed with exit code: 137
+[0;31m[ERROR][0m 2025-07-07 16:35:26 - Processing failed. Check logs for details.
+[0;34m================================================================================[0m
+[0;32m[INFO][0m 2025-07-07 16:35:26 - Cleaning up processes...
+[0;32m[INFO][0m 2025-07-07 16:35:26 - Stopping system monitoring...
+[0;32m[INFO][0m 2025-07-07 16:35:26 - Clearing GPU memory on GPUs 0,1,2,3...
+The following GPUs could not be reset:
+  GPU 00000000:65:02.0: Not Supported
+The following GPUs could not be reset:
+  GPU 00000000:65:03.0: Not Supported
+The following GPUs could not be reset:
+  GPU 00000000:67:02.0: Not Supported
+The following GPUs could not be reset:
+  GPU 00000000:67:03.0: Not Supported
